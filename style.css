@@ -1,0 +1,286 @@
+:root {
+  --color1: rgb(196, 155, 82);
+  --color2: rgb(164, 98, 27);
+  --color3: rgb(196, 193, 193);
+  --input-bg-color: rgb(31, 31, 31);
+  --container-bg-color: rgba(0, 0, 0, 0.548);
+}
+
+/* -webkit-background-clip: text; */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+  background-image: url(assets/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContainer {
+  border: 1px solid var(--color1);
+  background-color: var(--container-bg-color);
+  border-radius: 10px;
+  width: min(1300px, 99vw);
+  min-height: 600px;
+  /* width: 99vw; */
+
+  position: relative;
+  box-shadow: 0px 0px 30px 5px black;
+}
+
+.header {
+  /* border: 1px solid green; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* padding: 10px 30px; */
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+}
+
+.welcomeText {
+  /* font-weight: 100; */
+}
+
+.wrapper {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+}
+
+.subContainerLeft {
+  /* border: 1px solid blue; */
+  width: 50%;
+  height: 600px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBackground {
+  /* border: 1px solid red; */
+  width: 80%;
+}
+
+.subContainerRight {
+  /* border: 1px solid yellow; */
+  width: 50%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px;
+}
+
+.subContainerRight > p:nth-of-type(1) {
+  /* border: 1px solid blue; */
+  font-size: 3.5rem;
+  color: var(--color1);
+}
+
+.subContainerRight > p:nth-of-type(2) {
+  /* border: 1px solid blue; */
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color2);
+  width: min(450px, 99%);
+  margin-bottom: 30px;
+}
+
+.allInputContainer {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emailInputContainer {
+  position: relative;
+}
+
+.input {
+  border: none;
+  background-color: var(--input-bg-color);
+  padding: 21px 5px 7px 50px;
+  border-radius: 5px;
+  color: white;
+  width: 400px;
+  font-size: 1.2rem;
+  /* transition: all 1s ease-in-out; */
+}
+
+.input:focus {
+  outline: 1px solid var(--color1);
+}
+
+.input::placeholder {
+  /* background-color: red; */
+}
+
+.envelope {
+  /* border: 1px solid red; */
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2%;
+}
+
+.input + label {
+  /* user-select: none; */
+  pointer-events: none;
+  position: absolute;
+  left: 50px;
+  top: 32%;
+  transition: all 0.3s ease-in-out;
+  color: gray;
+}
+
+.input:focus + label,
+.input:not(:placeholder-shown) + label {
+  position: absolute;
+  left: 50px;
+  top: 17%;
+  font-size: 10px;
+}
+
+.passIcon {
+  width: 25px;
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+}
+
+.rememberForgetContainer {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 5px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.left label {
+  user-select: none;
+}
+
+.checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 2px solid rgb(3, 224, 88);
+  border-radius: 50%;
+  cursor: pointer;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkbox:checked {
+  background-color: rgb(3, 224, 88);
+  /* border-color: green; */
+}
+.checkbox:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+.forgetPassword {
+  color: var(--color1);
+}
+
+.buttonsContainer {
+  /* border: 1px solid blue; */
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.login,
+.create {
+  border-radius: 1000px;
+  padding: 10px 0px;
+  font-size: 1rem;
+  font-weight: bolder;
+  width: 150px;
+  border: none;
+}
+
+.login {
+  /* background-color: var(--color1); */
+  background-image: linear-gradient(90deg, var(--color1), var(--color2));
+}
+
+.login:hover {
+  box-shadow: 0px 0px 10px var(--color1);
+}
+
+.create {
+  background-color: var(--color3);
+}
+
+.create:hover {
+  box-shadow: 0px 0px 10px var(--color3);
+}
+
+.otherButtonsContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.otherButtonsContainer p {
+  color: gray;
+}
+
+.otherButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.otherIcon {
+  width: 40px;
+  cursor: pointer;
+}
+.otherIcon:hover {
+  transform: scale(1.1);
+}
+.apple {
+  filter: invert(1);
+}

@@ -1,0 +1,70 @@
+@media screen and (max-width: 965px) {
+  .subContainerLeft {
+    width: 40%;
+  }
+
+  .loginBackground {
+    width: 90%;
+  }
+
+  .subContainerRight {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .subContainerLeft {
+    width: 30%;
+  }
+
+  .loginBackground {
+    width: 90%;
+  }
+
+  .subContainerRight {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .subContainerLeft {
+    width: 70%;
+    height: fit-content;
+  }
+  .subContainerRight {
+    width: 100%;
+  }
+  body {
+    height: fit-content;
+  }
+  .subContainerRight {
+    height: 500px;
+  }
+  .wrapper {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .subContainerRight > p:nth-of-type(1) {
+    font-size: 2.7rem;
+  }
+
+  .subContainerRight > p:nth-of-type(2) {
+    font-size: 1.1rem;
+  }
+  .wrapper {
+    margin-top: 35px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .input {
+    width: 97vw;
+    font-size: 1rem;
+  }
+}
